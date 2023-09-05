@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="menu hide" id="menuPrincip">
+        <img class="rouge-gradiant" src="images/rouge.png" alt="">
+        <img class="bleu-gradiant" src="images/bleu.png" alt="">
+        <div class="headband_pos">
+            <div class="headband">
+                <h1>AFK</h1>
+                <h3>system</h3>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li onclick="showModes()">
+                        <img src="images/roulette.png" alt="">
+                        <div class="textnavbar">
+                            <h1>Modes</h1>
+                            <p>AFK Ranks</p>
+                        </div>
+                    </li>
+                    <li onclick="showTops()">
+                        <img src="images/top.png" alt="">
+                        <div class="textnavbar">
+                            <h1>Top</h1>
+                            <p>Top AFK Players</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="button_create" onclick="hideUI()">
+                    <p>X</p>
+                </div>
+            </div>
+        </div>
+        <div class="bar_bottom">
+            <img src="images/bar.png" alt="">
+        </div>
+        <!-- PAGE 1 -->
+        <div class="afkmodes" id="ModesCat">
+            <div style="height: 600px; overflow-y: scroll; max-width: 1800px; width: 1800px; margin: 0 auto; z-index: 10;"> 
+                <div class="mod" id="mod"></div>
+            </div>        
+        </div>
+    
+    <audio src="sounds/popup.mp3" id="confirmaudio"></audio>
+    <audio src="sounds/button_pressed.mp3" id="selectaudio"></audio>
+
+    <div class="confirmpage hide" id="confirmpage">
+        <img src="images/questions.png" class="questionimg">
+        <h1 class="confirmtext"">Êtes vous sur(e) de vouloir continuer cette action ?</h1>
+        <div class="buttons">
+            <button class="confirm" onclick="confirmSelect(true)"><h1>Accepter</h1></button>
+            <button class="cancel" onclick="confirmSelect(false)"><h1>Annuler</h1></button>
+        </div>
+    </div>
+
+    <div class="top-list hide" id="TopsCat">
+            <!-- <div class="bloc_top">
+                <img src="images/tr1.png" alt="">
+                <div class="pos_separator">
+                    <div class="separator"></div>
+                </div>
+                <div class="text_position">
+                    <h1 class="name">Pedro Dengho</h1>
+                    <p class="afk_number">Afks réalises : <span class="span_number">100</span></p>
+                    <p class="afk_number">Argent gagné : <span class="span_number">85123130$</span></p>
+                    <p class="afk_number">Nombre d’heures : <span class="span_number">150H</span></p>
+                </div>
+            </div>
+            <div class="bloc_top">
+                <img src="images/tr2.png" alt="">
+                <div class="pos_separator">
+                    <div class="separator"></div>
+                </div>
+                <div class="text_position">
+                    <h1 class="name">Garry Garry</h1>
+                    <p class="afk_number">Afks réalises : <span class="span_number">100</span></p>
+                    <p class="afk_number">Argent gagné : <span class="span_number">85123130$</span></p>
+                    <p class="afk_number">Nombre d’heures : <span class="span_number">100H</span></p>
+                </div>
+            </div>
+            <div class="bloc_top">
+                <img src="images/tr3.png" alt="">
+                <div class="pos_separator">
+                    <div class="separator"></div>
+                </div>
+                <div class="text_position">
+                    <h1 class="name">John Doe</h1>
+                    <p class="afk_number">Afks réalises : <span class="span_number">100</span></p>
+                    <p class="afk_number">Argent gagné : <span class="span_number">85123130$</span></p>
+                    <p class="afk_number">Nombre d’heures : <span class="span_number">50H</span></p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="afkTimer hide" id="afktimer">
+        <img src="images/afkborder.png" alt="" class="afkborder">
+        <ul class="listText">
+            <h1 class="text1">Vous êtes en mode afk</h1>
+            <h1 class="text5">Appuyez sur X pour sortir du mode afk</h1>
+        </ul>
+        <div class="textpos">
+            <h1 class="text2">Il vous reste <span class="text3" id="timeAfk">0</span> <span class="text4">minutes</span></h1>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</html>
